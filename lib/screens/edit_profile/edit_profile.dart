@@ -38,7 +38,7 @@ class _EditProfileState extends State<EditProfile> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Profile",
+          "My Profile",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -53,7 +53,12 @@ class _EditProfileState extends State<EditProfile> {
                     takePicture();
                   },
                   child: const CircleAvatar(
-                      radius: 55, child: Icon(Icons.camera_alt)),
+                      backgroundColor: Color.fromARGB(252, 243, 196, 43),
+                      radius: 55,
+                      child: Icon(
+                        Icons.camera_alt,
+                        color: Colors.white,
+                      )),
                 )
               : CupertinoButton(
                   onPressed: () {

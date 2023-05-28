@@ -40,7 +40,7 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                   Text(
-                    "\$${appProvider.totalPrice().toString()}",
+                    "\u{20B9}${appProvider.totalPrice().toString()}",
                     style: const TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -52,7 +52,7 @@ class _CartScreenState extends State<CartScreen> {
                 height: 24.0,
               ),
               PrimaryButton(
-                title: "Checkout",
+                title: "Check-Out",
                 onPressed: () {
                   appProvider.clearBuyProduct();
                   appProvider.addBuyProductCartList();
@@ -73,7 +73,7 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
         // backgroundColor: Colo,
         title: const Text(
-          "Cart Screen",
+          "My Basket",
           style: TextStyle(
             color: Colors.black,
           ),

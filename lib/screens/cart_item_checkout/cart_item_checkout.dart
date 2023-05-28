@@ -31,7 +31,7 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
-          "CartItemCheckout",
+          "Basket Check-Out",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -115,7 +115,7 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
               height: 24.0,
             ),
             PrimaryButton(
-              title: "Continues",
+              title: "Continue",
               onPressed: () async {
                 if (groupValue == 1) {
                   bool value = await FirebaseFirestoreHelper.instance

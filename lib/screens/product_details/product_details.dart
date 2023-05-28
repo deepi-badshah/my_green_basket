@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_greenbasket/widgets/expandable_text_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:my_greenbasket/constants/constants.dart';
 import 'package:my_greenbasket/constants/routes.dart';
+import 'package:my_greenbasket/constants/dimensions.dart';
 import 'package:my_greenbasket/models/product_model/product_model.dart';
 import 'package:my_greenbasket/provider/app_provider.dart';
 import 'package:my_greenbasket/screens/cart_screen/cart_screen.dart';
@@ -39,14 +41,14 @@ class _ProductDetailsState extends State<ProductDetails> {
       body: Padding(
         padding:
             const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-        child: SingleChildScrollView(
+        child: Container(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.network(
                 widget.singleProduct.image,
-                height: 400,
-                width: 400,
+                height: 300,
+                width: 300,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +56,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   Text(
                     widget.singleProduct.name,
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -79,7 +81,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                   ),
                 ],
               ),
-              Text(widget.singleProduct.description),
+              // Text(widget.singleProduct.description),
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: const ClampingScrollPhysics(),
+                  child: ExpandableTextWidget(
+                      text: widget.singleProduct.description),
+                ),
+              ),
               const SizedBox(
                 height: 12.00,
               ),

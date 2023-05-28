@@ -80,7 +80,7 @@ class _SingleFavouriteItemState extends State<SingleFavouriteItem> {
                           ],
                         ),
                         Text(
-                          "\$${widget.singleProduct.price.toString()}",
+                          "\u{20B9}${widget.singleProduct.price.toString()}",
                           style: const TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,

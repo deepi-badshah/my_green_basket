@@ -12,7 +12,7 @@ class OrderScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
-          "Your Orders",
+          "My Orders",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -33,7 +33,7 @@ class OrderScreen extends StatelessWidget {
               snapshot.data == null ||
               !snapshot.hasData) {
             return const Center(
-              child: Text("No Order Found"),
+              child: Text("Sorry No Order Found"),
             );
           }
 
@@ -97,7 +97,7 @@ class OrderScreen extends StatelessWidget {
                                       ],
                                     ),
                               Text(
-                                "Total Price: \$${orderModel.totalPrice.toString()}",
+                                "Total Price: \u{20B9}${orderModel.totalPrice.toString()}",
                                 style: const TextStyle(
                                   fontSize: 12.0,
                                 ),
@@ -170,7 +170,7 @@ class OrderScreen extends StatelessWidget {
                                                 ],
                                               ),
                                               Text(
-                                                "Price: \$${singleProduct.price.toString()}",
+                                                "Price: \u{20B9}${singleProduct.price.toString()}",
                                                 style: const TextStyle(
                                                   fontSize: 12.0,
                                                 ),

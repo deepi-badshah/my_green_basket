@@ -29,7 +29,7 @@ class _CheckoutState extends State<Checkout> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
-          "Checkout",
+          "Check-Out",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -54,6 +54,7 @@ class _CheckoutState extends State<Checkout> {
                   Radio(
                     value: 1,
                     groupValue: groupValue,
+                    activeColor: Color.fromARGB(252, 243, 196, 43),
                     onChanged: (value) {
                       setState(() {
                         groupValue = value!;
@@ -89,6 +90,7 @@ class _CheckoutState extends State<Checkout> {
                   Radio(
                     value: 2,
                     groupValue: groupValue,
+                    activeColor: Color.fromARGB(252, 243, 196, 43),
                     onChanged: (value) {
                       setState(() {
                         groupValue = value!;
@@ -113,7 +115,7 @@ class _CheckoutState extends State<Checkout> {
               height: 24.0,
             ),
             PrimaryButton(
-              title: "Continues",
+              title: "Continue",
               onPressed: () async {
                 appProvider.clearBuyProduct();
                 appProvider.addBuyProduct(widget.singleProduct);
