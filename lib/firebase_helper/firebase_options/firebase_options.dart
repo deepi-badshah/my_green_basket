@@ -16,10 +16,10 @@ class DefaultFirebaseConfig {
     } else {
       // Android
       return const FirebaseOptions(
-        appId: '1:283466351178:android:ca45dd94745ddc44939cb3',
-        apiKey: 'AIzaSyBKIa_OroKbFuJp1ecw6bT25s3kTg-544I',
-        projectId: 'e-commerce-6455a',
-        messagingSenderId: '283466351178',
+        appId: '1:1007792277300:android:6cb94ade3880f82ffe4761',
+        apiKey: 'AIzaSyCZ2nmM8Fl0Tt-COFHN-ak6Mx6d2Ql5nW0',
+        projectId: 'mygreenbasket-738ef',
+        messagingSenderId: '1007792277300',
       );
     }
   }

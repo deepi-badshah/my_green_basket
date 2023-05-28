@@ -4,5 +4,6 @@
         "E:\\SDK\\flutter",
         "E:\\SDK\\flutter new"
     ],
-    "dart.flutterSdkPath": "E:\\SDK\\flutter new"
+    "dart.flutterSdkPath": "E:\\SDK\\flutter new",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
