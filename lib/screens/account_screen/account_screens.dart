@@ -28,10 +28,10 @@ class _AccountScreenState extends State<AccountScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          "Account",
-          style: TextStyle(
-            color: Colors.black,
+        title: const Center(
+          child: Text(
+            "My Account !",
+            style: TextStyle(color: Colors.black, fontSize: 30),
           ),
         ),
       ),
@@ -86,7 +86,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         .push(widget: const OrderScreen(), context: context);
                   },
                   leading: const Icon(Icons.shopping_bag_outlined),
-                  title: const Text("Your Orders"),
+                  title: const Text("My Orders"),
                 ),
                 ListTile(
                   onTap: () {
@@ -94,7 +94,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         widget: const FavouriteScreen(), context: context);
                   },
                   leading: const Icon(Icons.favorite_outline),
-                  title: const Text("Favourite"),
+                  title: const Text("My Favourites"),
                 ),
                 ListTile(
                   onTap: () {
@@ -102,7 +102,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         .push(widget: const AboutUs(), context: context);
                   },
                   leading: const Icon(Icons.info_outline),
-                  title: const Text("About us"),
+                  title: const Text("About the developer"),
                 ),
                 ListTile(
                   onTap: () {
