@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_greenbasket">
    <application
-        android:label="Youtube Ecommerce"
+        android:label="My Green Basket"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
