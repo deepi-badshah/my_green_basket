@@ -70,7 +70,7 @@ class _CategoryViewState extends State<CategoryView> {
                   ),
                   productModelList.isEmpty
                       ? const Center(
-                          child: Text("Best Product is empty"),
+                          child: Text("Sorry! Popular Product list is empty"),
                         )
                       : Padding(
                           padding: const EdgeInsets.all(12.0),

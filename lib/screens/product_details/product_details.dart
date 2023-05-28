@@ -171,7 +171,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                             widget: Checkout(singleProduct: productModel),
                             context: context);
                       },
-                      child: const Text("Buy Me"),
+                      child: const Text(
+                        "Buy Me",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

@@ -77,13 +77,13 @@ String getMessageFromErrorCode(String errorCode) {
 
 bool loginVaildation(String email, String password) {
   if (email.isEmpty && password.isEmpty) {
-    showMessage("Both Fields are empty");
+    showMessage("Both Fields are empty!");
     return false;
   } else if (email.isEmpty) {
-    showMessage("Email is Empty");
+    showMessage("May, I know your Email!");
     return false;
   } else if (password.isEmpty) {
-    showMessage("Password is Empty");
+    showMessage("Please fill out your Password!");
     return false;
   } else {
     return true;
@@ -93,19 +93,19 @@ bool loginVaildation(String email, String password) {
 bool signUpVaildation(
     String email, String password, String name, String phone) {
   if (email.isEmpty && password.isEmpty && name.isEmpty && phone.isEmpty) {
-    showMessage("All Fields are empty");
+    showMessage("May, I know a bit more about you!");
     return false;
   } else if (name.isEmpty) {
-    showMessage("Name is Empty");
+    showMessage("May, I know your name please!");
     return false;
   } else if (email.isEmpty) {
-    showMessage("Email is Empty");
+    showMessage("May, I know your Email!");
     return false;
   } else if (phone.isEmpty) {
-    showMessage("Phone is Empty");
+    showMessage("Please fill out your Phone!");
     return false;
   } else if (password.isEmpty) {
-    showMessage("Password is Empty");
+    showMessage("Please set your Password!");
     return false;
   } else {
     return true;
