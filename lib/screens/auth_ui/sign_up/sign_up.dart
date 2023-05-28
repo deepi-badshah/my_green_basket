@@ -29,18 +29,19 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding:
+              const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const TopTitles(
-                  subtitle: "Welcome Back To E Commerce App",
-                  title: "Create Account"),
+                  subtitle: "My Green Basket", title: "Create Account"),
               const SizedBox(
                 height: 46.0,
               ),
               TextFormField(
                 controller: name,
+                cursorColor: Color.fromARGB(252, 243, 196, 43),
                 decoration: const InputDecoration(
                   hintText: "Name",
                   prefixIcon: Icon(
@@ -53,6 +54,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: email,
+                cursorColor: Color.fromARGB(252, 243, 196, 43),
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   hintText: "E-mail",
@@ -66,6 +68,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: phone,
+                cursorColor: Color.fromARGB(252, 243, 196, 43),
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(
                   hintText: "Phone",
@@ -79,6 +82,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: password,
+                cursorColor: Color.fromARGB(252, 243, 196, 43),
                 obscureText: isShowPassword,
                 decoration: InputDecoration(
                   hintText: "Password",
@@ -119,7 +123,7 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(
                 height: 24.0,
               ),
-              const Center(child: Text("I have already an account?")),
+              const Center(child: Text("Already having an account ?")),
               const SizedBox(
                 height: 12.0,
               ),
@@ -128,9 +132,10 @@ class _SignUpState extends State<SignUp> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text(
+                  child: const Text(
                     "Login",
-                    style: TextStyle(color: Theme.of(context).primaryColor),
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),

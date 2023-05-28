@@ -37,7 +37,8 @@ class _ProductDetailsState extends State<ProductDetails> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding:
+            const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,6 +75,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             .contains(widget.singleProduct)
                         ? Icons.favorite
                         : Icons.favorite_border),
+                    color: const Color.fromARGB(252, 243, 196, 43),
                   ),
                 ],
               ),
@@ -93,7 +95,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     },
                     padding: EdgeInsets.zero,
                     child: const CircleAvatar(
-                      child: Icon(Icons.remove),
+                      child: Icon(
+                        Icons.remove,
+                        color: Colors.black,
+                      ),
+                      backgroundColor: Color.fromARGB(252, 243, 196, 43),
                     ),
                   ),
                   const SizedBox(
@@ -117,7 +123,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     },
                     padding: EdgeInsets.zero,
                     child: const CircleAvatar(
-                      child: Icon(Icons.add),
+                      backgroundColor: Color.fromARGB(252, 243, 196, 43),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ],
@@ -134,9 +144,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ProductModel productModel =
                           widget.singleProduct.copyWith(qty: qty);
                       appProvider.addCartProduct(productModel);
-                      showMessage("Added to Cart");
+                      showMessage("New Product added to the Basket");
                     },
-                    child: const Text("ADD TO CART"),
+                    child: const Text("Add To Basket"),
                   ),
                   const SizedBox(
                     width: 24.0,
@@ -152,7 +162,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             widget: Checkout(singleProduct: productModel),
                             context: context);
                       },
-                      child: const Text("BUY"),
+                      child: const Text("Buy Me"),
                     ),
                   ),
                 ],

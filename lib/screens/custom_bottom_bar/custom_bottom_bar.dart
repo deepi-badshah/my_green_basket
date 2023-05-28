@@ -32,28 +32,28 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
           icon: const Icon(Icons.home),
           inactiveIcon: const Icon(Icons.home_outlined),
           title: "Home",
-          activeColorPrimary: Colors.white,
+          activeColorPrimary: Color.fromARGB(252, 243, 196, 43),
           inactiveColorPrimary: Colors.white,
         ),
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.shopping_cart),
           inactiveIcon: const Icon(Icons.shopping_cart_outlined),
           title: "Cart",
-          activeColorPrimary: Colors.white,
+          activeColorPrimary: Color.fromARGB(252, 243, 196, 43),
           inactiveColorPrimary: Colors.white,
         ),
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.circle_rounded),
           inactiveIcon: const Icon(Icons.circle_outlined),
           title: "Orders",
-          activeColorPrimary: Colors.white,
+          activeColorPrimary: Color.fromARGB(252, 243, 196, 43),
           inactiveColorPrimary: Colors.white,
         ),
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.person),
           inactiveIcon: const Icon(Icons.person_outline),
           title: "Account",
-          activeColorPrimary: Colors.white,
+          activeColorPrimary: Color.fromARGB(252, 243, 196, 43),
           inactiveColorPrimary: Colors.white,
         ),
       ];
@@ -71,9 +71,10 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
               : kBottomNavigationBarHeight,
           bottomScreenMargin: 0,
 
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: Color.fromARGB(179, 177, 232, 14),
           hideNavigationBar: _hideNavBar,
-          decoration: const NavBarDecoration(colorBehindNavBar: Colors.indigo),
+          decoration: const NavBarDecoration(
+              colorBehindNavBar: Color.fromARGB(179, 177, 232, 14)),
           itemAnimationProperties: const ItemAnimationProperties(
             duration: Duration(milliseconds: 400),
             curve: Curves.ease,
@@ -81,8 +82,8 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
           screenTransitionAnimation: const ScreenTransitionAnimation(
             animateTabTransition: true,
           ),
-          navBarStyle:
-              NavBarStyle.style1, // Choose the nav bar style with this property
+          navBarStyle: NavBarStyle
+              .neumorphic, // Choose the nav bar style with this property
         ),
       );
 }

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       create: (context) => AppProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Youtube E-Commerce',
+        title: 'My Green Basket',
         theme: themeData,
         home: StreamBuilder(
           stream: FirebaseAuthHelper.instance.getAuthChange,

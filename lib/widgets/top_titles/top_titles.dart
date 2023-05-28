@@ -24,7 +24,7 @@ class TopTitles extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            fontSize: 18.0,
+            fontSize: 28.0,
             fontWeight: FontWeight.bold,
           ),
         ),

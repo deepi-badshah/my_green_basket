@@ -28,12 +28,12 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding:
+              const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TopTitles(
-                  subtitle: "Welcome Back To E Commerce App", title: "Login"),
+              const TopTitles(subtitle: "Hey! Welcome Again", title: "Login"),
               const SizedBox(
                 height: 46.0,
               ),

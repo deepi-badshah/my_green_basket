@@ -14,12 +14,13 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding:
+            const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TopTitles(
-                subtitle: "Buy AnyItems From Using App ", title: "Welcome"),
+                subtitle: "Taste the nature's art", title: "Hello!"),
             Center(
               child: Image.asset(
                 AssetsImages.instance.welcomeImage,

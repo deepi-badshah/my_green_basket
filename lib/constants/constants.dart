@@ -19,7 +19,7 @@ showLoaderDialog(BuildContext context) {
           mainAxisSize: MainAxisSize.min,
           children: [
             const CircularProgressIndicator(
-              color: Color(0xffe16555),
+              color: Color.fromARGB(179, 177, 232, 14),
             ),
             const SizedBox(
               height: 18.0,

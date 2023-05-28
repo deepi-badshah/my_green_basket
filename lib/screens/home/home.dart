@@ -66,7 +66,9 @@ class _HomeState extends State<Home> {
                 height: 100,
                 width: 100,
                 alignment: Alignment.center,
-                child: const CircularProgressIndicator(),
+                child: const CircularProgressIndicator(
+                  color: Color.fromARGB(179, 177, 232, 14),
+                ),
               ),
             )
           : SingleChildScrollView(
@@ -78,7 +80,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const TopTitles(subtitle: "", title: "E Commerce"),
+                        const TopTitles(subtitle: "", title: "My Green Basket"),
                         TextFormField(
                           controller: search,
                           onChanged: (String value) {
@@ -91,7 +93,7 @@ class _HomeState extends State<Home> {
                           height: 24.0,
                         ),
                         const Text(
-                          "Categories",
+                          "Explore Me..",
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
@@ -102,7 +104,7 @@ class _HomeState extends State<Home> {
                   ),
                   categoriesList.isEmpty
                       ? const Center(
-                          child: Text("Categories is empty"),
+                          child: Text("Filling up for you to explore!"),
                         )
                       : SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
@@ -145,7 +147,7 @@ class _HomeState extends State<Home> {
                       ? const Padding(
                           padding: EdgeInsets.only(top: 12.0, left: 12.0),
                           child: Text(
-                            "Best Products",
+                            "Popular Products",
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
@@ -206,7 +208,7 @@ class _HomeState extends State<Home> {
                                             ),
                                           ),
                                           Text(
-                                              "Price: \$${singleProduct.price}"),
+                                              "Price: \u{20B9}${singleProduct.price}"),
                                           const SizedBox(
                                             height: 30.0,
                                           ),
@@ -222,7 +224,7 @@ class _HomeState extends State<Home> {
                                                     context: context);
                                               },
                                               child: const Text(
-                                                "Buy",
+                                                "Buy Me",
                                               ),
                                             ),
                                           ),
@@ -233,7 +235,8 @@ class _HomeState extends State<Home> {
                             )
                           : productModelList.isEmpty
                               ? const Center(
-                                  child: Text("Best Product is empty"),
+                                  child: Text(
+                                      "Popular Product list is currently empty"),
                                 )
                               : Padding(
                                   padding: const EdgeInsets.all(12.0),
@@ -281,7 +284,7 @@ class _HomeState extends State<Home> {
                                                 ),
                                               ),
                                               Text(
-                                                  "Price: \$${singleProduct.price}"),
+                                                  "Price: \u{20B9}${singleProduct.price}"),
                                               const SizedBox(
                                                 height: 30.0,
                                               ),
@@ -296,8 +299,26 @@ class _HomeState extends State<Home> {
                                                                 singleProduct),
                                                         context: context);
                                                   },
+                                                  style:
+                                                      OutlinedButton.styleFrom(
+                                                          backgroundColor:
+                                                              const Color
+                                                                      .fromARGB(
+                                                                  252,
+                                                                  243,
+                                                                  196,
+                                                                  43),
+                                                          side:
+                                                              const BorderSide(
+                                                                  color: Colors
+                                                                      .amber)),
                                                   child: const Text(
-                                                    "Buy",
+                                                    "Buy Me",
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontSize: 14,
+                                                        color: Colors.white),
                                                   ),
                                                 ),
                                               ),
