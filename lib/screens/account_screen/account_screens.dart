@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:my_greenbasket/constants/routes.dart';
-import 'package:my_greenbasket/firebase_helper/firebase_auth_helper/firebase_auth_helper.dart';
 import 'package:my_greenbasket/screens/about_us/about_us.dart';
 import 'package:my_greenbasket/screens/change_password/change_password.dart';
 import 'package:my_greenbasket/screens/edit_profile/edit_profile.dart';
@@ -114,9 +113,10 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 ListTile(
                   onTap: () {
-                    FirebaseAuthHelper.instance.signOut();
-
-                    setState(() {});
+                    // FirebaseAuthHelper.instance.signOut();
+                    // Routes.instance
+                    //     .push(widget: const Home(), context: context);
+                    // setState(() {});
                   },
                   leading: const Icon(Icons.exit_to_app),
                   title: const Text("Log out"),

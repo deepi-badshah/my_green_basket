@@ -41,7 +41,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: name,
-                cursorColor: Color.fromARGB(252, 243, 196, 43),
+                cursorColor: const Color.fromARGB(252, 243, 196, 43),
                 decoration: const InputDecoration(
                   hintText: "Name",
                   prefixIcon: Icon(
@@ -54,7 +54,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: email,
-                cursorColor: Color.fromARGB(252, 243, 196, 43),
+                cursorColor: const Color.fromARGB(252, 243, 196, 43),
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   hintText: "E-mail",
@@ -68,7 +68,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: phone,
-                cursorColor: Color.fromARGB(252, 243, 196, 43),
+                cursorColor: const Color.fromARGB(252, 243, 196, 43),
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(
                   hintText: "Phone",
@@ -82,7 +82,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextFormField(
                 controller: password,
-                cursorColor: Color.fromARGB(252, 243, 196, 43),
+                cursorColor: const Color.fromARGB(252, 243, 196, 43),
                 obscureText: isShowPassword,
                 decoration: InputDecoration(
                   hintText: "Password",

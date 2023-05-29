@@ -4,7 +4,7 @@ import 'package:my_greenbasket/widgets/expandable_text_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:my_greenbasket/constants/constants.dart';
 import 'package:my_greenbasket/constants/routes.dart';
-import 'package:my_greenbasket/constants/dimensions.dart';
+
 import 'package:my_greenbasket/models/product_model/product_model.dart';
 import 'package:my_greenbasket/provider/app_provider.dart';
 import 'package:my_greenbasket/screens/cart_screen/cart_screen.dart';
@@ -104,11 +104,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     },
                     padding: EdgeInsets.zero,
                     child: const CircleAvatar(
+                      backgroundColor: Color.fromARGB(252, 243, 196, 43),
                       child: Icon(
                         Icons.remove,
                         color: Colors.black,
                       ),
-                      backgroundColor: Color.fromARGB(252, 243, 196, 43),
                     ),
                   ),
                   const SizedBox(

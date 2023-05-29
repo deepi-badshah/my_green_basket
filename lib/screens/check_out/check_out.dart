@@ -54,7 +54,7 @@ class _CheckoutState extends State<Checkout> {
                   Radio(
                     value: 1,
                     groupValue: groupValue,
-                    activeColor: Color.fromARGB(252, 243, 196, 43),
+                    activeColor: const Color.fromARGB(252, 243, 196, 43),
                     onChanged: (value) {
                       setState(() {
                         groupValue = value!;
@@ -90,7 +90,7 @@ class _CheckoutState extends State<Checkout> {
                   Radio(
                     value: 2,
                     groupValue: groupValue,
-                    activeColor: Color.fromARGB(252, 243, 196, 43),
+                    activeColor: const Color.fromARGB(252, 243, 196, 43),
                     onChanged: (value) {
                       setState(() {
                         groupValue = value!;

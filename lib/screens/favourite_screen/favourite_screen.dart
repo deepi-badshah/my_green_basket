@@ -17,7 +17,7 @@ class FavouriteScreen extends StatelessWidget {
       appBar: AppBar(
         // backgroundColor: Colo,
         title: const Text(
-          "Favourite Screen",
+          "My Favourites",
           style: TextStyle(
             color: Colors.black,
           ),
