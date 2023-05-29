@@ -7,7 +7,7 @@ import 'package:my_greenbasket/screens/auth_ui/welcome/welcome.dart';
 import 'package:my_greenbasket/screens/custom_bottom_bar/custom_bottom_bar.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -29,16 +29,30 @@ class _SplashScreenState extends State<SplashScreen>
     animation = CurvedAnimation(parent: controller, curve: Curves.linear);
     Timer(
       const Duration(seconds: 3),
-      () => StreamBuilder(
-        stream: FirebaseAuthHelper.instance.getAuthChange,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return const CustomBottomBar();
-          }
-          return const Welcome();
-        },
-      ),
+      navigateToNextScreen,
     );
+  }
+
+  void navigateToNextScreen() {
+    final stream = FirebaseAuthHelper.instance.getAuthChange;
+
+    stream.first.then((snapshot) {
+      if (snapshot != null) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const CustomBottomBar()),
+        );
+      } else {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const Welcome()),
+        );
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -51,19 +65,19 @@ class _SplashScreenState extends State<SplashScreen>
           ScaleTransition(
             scale: animation,
             child: Center(
-                child: Image.asset(
-              "assets/images/logo1.png",
-              // width: Dimensions.splashImg,
-              width: 200,
-            )),
+              child: Image.asset(
+                "assets/images/logo1.png",
+                width: 200,
+              ),
+            ),
           ),
           const SizedBox(height: 20),
           Center(
-              child: Image.asset(
-            "assets/images/tag_line.png",
-            // width: Dimensions.splashImg,
-            width: 200,
-          )),
+            child: Image.asset(
+              "assets/images/tag_line.png",
+              width: 300,
+            ),
+          ),
         ],
       ),
     );

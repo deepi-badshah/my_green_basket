@@ -12,7 +12,12 @@ class PrimaryButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: Colors.white, // Set the text color explicitly
+          ),
+        ),
       ),
     );
   }
