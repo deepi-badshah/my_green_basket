@@ -1,6 +1,20 @@
 # My Green Basket
 
 An application to deliver fresh and organic fruits n vegetables
+- A very clean UI/UX designed to enhance user experience.
+- Options for both card payment and Cash on Delivery (COD).
+- Seamless navigation to popular products, categories, or direct product search by name.
+- Password reset functionality for user convenience.
+- Over 50 products categorized across 5 categories, presented through 10+ screens.
+- Animated bottom navigation bar featuring 4 navigation options.
+- Responsive screen for detailed product descriptions, enabling direct purchase or cart addition.
+- Ability for users to curate a list of favorite items and add them to their basket.
+- Purchases restricted to signed-up or logged-in users, with direct ordering from the basket.
+- Comprehensive order history, displaying all previous orders with item details and status.
+- Profile customization, including updating profile photo from gallery along with name.
+- Flexible management of Favorite Products by users.
+- User-initiated password updates with a new password.
+- Multi-device login and seamless logout from the current device.
 
 <img src="https://github.com/deepi-badshah/my_green_basket/blob/master/project_demo/Big%20Screen%20Demo.png" alt="MLBC">
 
